@@ -9,7 +9,7 @@ A J2EE Web Application built to work with Payara.
 
 3. On NetBeans, go to Tools > Plugins > Installed and check if Payara Common and Payara Server are installed. If not, go to Available Updates, search for Payara and install them.
 
-4. Go to Servers > Servers and right-click, then select Add Server. Select Payara Server, and direct to the payara5 folder. Set the username to admin and don't set a password. Set the name to 'Webapps' if prompted.
+4. Go to Services > Servers and right-click, then select Add Server. Select Payara Server, and direct to the payara5 folder. Set the username to admin and don't set a password. Set the name to 'Webapps' if prompted.
 
 5. Follow the first three steps on this link [here.](https://netbeans.org/kb/docs/ide/java-db.html) The Java DB folder should be called 'db' in JDK 8 after installation, if not already installed. When it asks for the Database Location, select the 'Derby' folder.
 

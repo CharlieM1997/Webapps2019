@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="error.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="supervisor/newproject.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="supervisor/proposal.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="supervisor/view.xhtml" x="1150" y="300" zoom="true"/>
+        <Node id="index.xhtml" x="1400" y="150" zoom="true"/>
+        <Node id="student/selectproject.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="supervisor/newtopic.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="student/proposal.xhtml" x="900" y="300" zoom="true"/>
+        <Node id="supervisor/report.xhtml" x="150" y="750" zoom="true"/>
+        <Node id="supervisor/selectproject.xhtml" x="400" y="600" zoom="true"/>
+        <Node id="supervisor/supervisor.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="student/newproject.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="admin/admin.xhtml" x="650" y="450" zoom="true"/>
+        <Node id="student/student.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="login.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="supervisor/access.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="admin/registration.xhtml" x="650" y="300" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Webapps 2019 - Write Report</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            Fill in the details and press the create button.
+            <br/>
+            <hr/>
+            <h:outputLabel for="details" value="*Details for project #{proposalsBean.project.title}:"/>
+            <br/>
+            <h:inputTextarea rows="50" cols="50" id="details" value="#{proposalsBean.rptDetails}" title="Enter Project Report" label="report" required="true" requiredMessage="Mandatory Field">
+                <f:validateLength minimum="3"/>
+            </h:inputTextarea>
+            <br/>
+            <h:commandButton id="register" type="submit" value="Submit" action="#{proposalsBean.submitReport}" title="Submit Report"/>
+            <h:commandButton id="reset" type="reset" value="Reset Form" title="Reset Form" style="margin-left: 5px"/>
+            <br/>
+            <h:link value="Go back to supervisor page" outcome="supervisor"/>
+        </h:form>
+    </h:body>
+</html>

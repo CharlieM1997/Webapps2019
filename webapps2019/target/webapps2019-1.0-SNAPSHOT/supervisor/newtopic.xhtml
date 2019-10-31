@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Topic Registration</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            Fill in the details and press the register button.
+            <br/>
+            <hr/>
+            <h:outputLabel for="title" value="*Topic title:"/>
+            <br/>
+            <br/>
+            <h:inputText id ="title" value="#{topicBean.title}" title="Enter Topic title" required="true" requiredMessage="Mandatory Field">
+               <f:validateLength minimum="2" maximum="100"/>
+            </h:inputText>
+            <h:message for="title" style="color:red"/>
+            <br/>
+            <br/>
+            <h:outputLabel for="description" value="*Description:"/>
+            <br/>
+            <h:inputTextarea rows="50" cols="50" id="description" value="#{topicBean.description}" title="Enter Topic description" label="description" required="true" requiredMessage="Mandatory Field">
+                <f:validateLength minimum="3" maximum="1000"/>
+            </h:inputTextarea>
+            <h:message for="description" style="color:red"/>
+            <br/>
+            <h:commandButton id="register" type="submit" value="Register" action="#{topicBean.register}" title="Register Topic"/>
+            <h:commandButton id="reset" type="reset" value="Reset Form" title="Reset Form" style="margin-left: 5px"/>
+            <br/>
+            <h:link value="Go back to supervisor page" outcome="supervisor"/>
+        </h:form>
+    </h:body>
+</html>

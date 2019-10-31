@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Webapps 2019 - Administrator Section</title>
+    </h:head>
+    <h:body>
+        <h:outputLabel value="Administrator's Section: #{loginBean.uniID}"/>
+        <br/>
+        <br/>
+        <h:form>
+            Register new user: <h:link value="here" outcome="registration"/>
+            <br/>
+            Access projects: <h:link value="here" outcome="access"/>
+            <br/>
+            View log: <h:link value="here" outcome="log"/>
+            <br/>
+            Supervisor section: <h:link value='here' outcome='/supervisor/supervisor.xhtml'/>
+            <br/>
+            Logout: <h:commandButton value="Logout" action="#{loginBean.logout()}"/>
+        </h:form>
+    </h:body>
+</html>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>User Registration</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            Fill in the details and press the register button.
+            <br/>
+            <hr/>
+            <h:outputLabel for="student" value="*Select the user type to register."/>
+            <h:selectOneRadio id="student" value="#{registrationBean.student}" title="Select user type">
+                <f:selectItem itemValue="#{true}" itemLabel="Student"/>
+                <f:selectItem itemValue="#{false}" itemLabel="Supervisor"/>
+                <f:ajax render='type'/>
+            </h:selectOneRadio>
+            <br/>
+            <h:outputLabel for="uniID" value="*University of Sussex ID:"/>
+            <h:inputText id ="uniID" value="#{registrationBean.uniID}" title="Enter University of Sussex ID" required="true" requiredMessage="Mandatory Field"/>
+            <h:message for="uniID" style="color:red"/>
+            <br/>
+            <h:outputLabel for="userPassword" value="*Password:"/>
+            <h:inputSecret id="userPassword" value="#{registrationBean.userpassword}" title="Enter password" label="password" required="true" requiredMessage="Mandatory Field" validatorMessage="Password is not secure. Please use a minimum password length of six characters and at least one letter and number.">
+                <f:validateRegex pattern = "^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$"/>
+            </h:inputSecret>
+            <h:message for="userPassword" style="color:red"/>
+            <br/>
+            <h:outputLabel for="name" value="*First Name: "/>
+            <h:inputText id ="name" value="#{registrationBean.name}" title="Enter first name" required="true" label="name" requiredMessage="Mandatory Field"/>
+            <h:message for = "name" style = "color:red"/>
+            <br/>
+            <h:outputLabel for="surname" value="*Last Name: "/>
+            <h:inputText id ="surname" value="#{registrationBean.surname}" title="Enter surname" label="surname" required="true"  requiredMessage="Mandatory Field"/>
+            <h:message for="surname" style="color:red"/>
+            <br/>
+            <h:outputLabel for="email" value="*Email Address: "/>
+            <h:inputText id="email" value="#{registrationBean.email}" title="Enter Email Address" label="surname" required="true" requiredMessage="Mandatory Field" validatorMessage="This is not a correct email address.">
+                <f:validateRegex pattern="([^.@]+)(\.[^.@]+)*@([^.@]+\.)+([^.@]+)"/>
+            </h:inputText>
+            <h:message for="email" style="color:red"/>
+            <br/>
+            <h:panelGroup id='type'>
+                <h:panelGroup rendered="#{registrationBean.student eq 'true'}">
+                    <h:outputLabel for="course" value="*Student's Course: "/>
+                    <h:inputText id="course" value="#{registrationBean.course}" title="Enter Student's Course" label="course" required="true" requiredMessage="Mandatory Field"/>
+                    <h:message for="course" style="color:red"/>
+                    <br/>
+                </h:panelGroup>
+                <h:panelGroup rendered="#{registrationBean.student eq 'false'}">
+                    <h:outputLabel for="department" value="*Supervisor's Department: "/>
+                    <h:inputText id="department" value="#{registrationBean.department}" title="Enter Supervisor's Department" label='department' required='true' requiredMessage="Mandatory Field"/>
+                    <h:message for='department' style='color:red'/>
+                    <br/>
+                    <h:outputLabel for='phoneNum' value="Phone Number: "/>
+                    <h:inputText id="phoneNum" value="#{registrationBean.phoneNum}" title="Enter Phone Number" label="phone" required="true" requiredMessage="Mandatory Field">
+                        <f:validateRegex pattern="((\+[1-9]{3,4}|0[1-9]{4}|00[1-9]{3})\-?)?\d{8,20}"/>
+                    </h:inputText>
+                    <br/>
+                    <h:outputLabel for="admin" value="Give this supervisor administrative privileges? "/>
+                    <h:selectBooleanCheckbox value="#{registrationBean.admin}" title="Administrative Privileges" required="true" requiredMessage="Mandatory Field"/>
+                    <br/>
+                </h:panelGroup>
+            </h:panelGroup>
+            <h:commandButton id="register" type="submit" value="Register" action="#{registrationBean.register}" title="Register User"/>
+            <h:commandButton id="reset" type="reset" value="Reset Form" title="Reset Form" style="margin-left: 5px"/>
+        </h:form>
+    </h:body>
+</html>
+

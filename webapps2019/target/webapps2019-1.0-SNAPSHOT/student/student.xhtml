@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Webapps 2019 - Student Section</title>
+    </h:head>
+    <h:body>
+        <h:outputLabel value="Student's Section: #{loginBean.uniID}"/>
+        <br/>
+        <br/>
+        <h:form>
+            Register new project: <h:link value="here" outcome="#{studentBean.checkProject()}"/>
+            <br/>
+            View existing projects: <h:link value="here" outcome="selectproject"/>
+            <br/>
+            Logout: <h:commandButton value="Logout" action="#{loginBean.logout()}"/>
+        </h:form>
+    </h:body>
+</html>
+

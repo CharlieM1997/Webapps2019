@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Webapps 2019 - Project Registration</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            Fill in the details and press the register button.
+            <br/>
+            <hr/>
+            <h:outputLabel for="title" value="*Project title:"/>
+            <br/>
+            <br/>
+            <h:inputText id ="title" value="#{projectBean.title}" title="Enter Project title" required="true" requiredMessage="Mandatory Field">
+               <f:validateLength minimum="3" maximum="200"/>
+            </h:inputText>
+            <h:message for="title" style="color:red"/>
+            <br/>
+            <br/>
+            <h:outputLabel for="description" value="*Description:"/>
+            <br/>
+            <h:inputTextarea rows="50" cols="50" id="description" value="#{projectBean.description}" title="Enter Project description" label="description" required="true" requiredMessage="Mandatory Field">
+                <f:validateLength minimum="3" maximum="1000"/>
+            </h:inputTextarea>
+            <h:message for="description" style="color:red"/>
+            <br/>
+            <h:outputLabel for="reqSkills" value="*Required skills for the project:"/>
+            <h:inputText id="reqSkills" value="#{projectBean.reqSkills}" title="Enter required skills" label="reqSkills" required="true" requiredMessage="Mandatory Field" style="margin-left:5px"/>
+            <h:message for="reqSkills" style="color:red"/>
+            <br/>
+            <h:outputLabel for="topicSet" value="*Select topics related to this project:"/>
+            <h:selectManyCheckbox id="selectedTitles" value="#{projectBean.topicSet}" title="Select related topics" label="selectedTitles" style="margin-left:5px">
+                <f:selectItems value="#{projectBean.allTopics}" var="topic"
+                               itemValue="#{topic}" itemLabel="#{topic.title}"/>
+            </h:selectManyCheckbox>
+            <br/>
+            <h:outputLabel for="supervisor" value="*Select supervisor to propose project to:"/>
+            <h:selectOneListbox id="supervisor" value="#{projectBean.supervisor}" title="Select supervisor" label="supervisor" required="true" requiredMessage="Mandatory Field" style="margin-left:5px">
+                <f:converter binding="#{supervisorConverter}"/>
+                <f:selectItems value="#{projectBean.allSupervisors}" var="supervisor"
+                               itemValue="#{supervisor}" itemLabel="#{supervisor.name.concat(' ').concat(supervisor.surname)}"/>
+            </h:selectOneListbox>
+            <br/>
+            <h:commandButton id="register" type="submit" value="Register" action="#{projectBean.registerAsStudent}" title="Register Project"/>
+            <h:commandButton id="reset" type="reset" value="Reset Form" title="Reset Form" style="margin-left: 5px"/>
+            <br/>
+            <h:link value="Go back to student page" outcome="student"/>
+        </h:form>
+    </h:body>
+</html>

@@ -1,0 +1,83 @@
+/* AUTOMATICALLY GENERATED ON Thu Oct 31 19:10:08 GMT 2019*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.EJBMethodPermission "StudentFacadeREST", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "ProjectFacadeREST", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ProjectService", "registerProjectWithStudentAndSet,Local,java.lang.String,java.lang.String,java.lang.String,com.cpwm20.webapps2019.entity.Project$Status,java.util.Set,com.cpwm20.webapps2019.entity.Student,com.cpwm20.webapps2019.entity.Supervisor";
+  permission javax.security.jacc.EJBMethodPermission "StudentFacadeREST", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "ProjectFacadeREST", "create,Local,com.cpwm20.webapps2019.entity.Project";
+  permission javax.security.jacc.EJBMethodPermission "ProjectFacadeREST", "edit,Local,java.lang.Long,com.cpwm20.webapps2019.entity.Project";
+  permission javax.security.jacc.EJBMethodPermission "UserService", "findUser,Local,java.lang.Long";
+  permission javax.security.jacc.EJBMethodPermission "UserService", "findUser,Local,java.lang.String,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "SupervisorFacadeREST", "countREST,Local,";
+  permission javax.security.jacc.EJBMethodPermission "ProjectService", "acceptProject,Local,com.cpwm20.webapps2019.entity.Project";
+  permission javax.security.jacc.EJBMethodPermission "SupervisorFacadeREST", "remove,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "TimestampService", "timestamp,Local,";
+  permission javax.security.jacc.EJBMethodPermission "UserService", "findGroup,Local,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "ProjectFacadeREST", "findRange,Local,java.lang.Integer,java.lang.Integer";
+  permission javax.security.jacc.EJBMethodPermission "SupervisorFacadeREST", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "SupervisorFacadeREST", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ProjectService", "deselectProject,Local,com.cpwm20.webapps2019.entity.Project";
+  permission javax.security.jacc.EJBMethodPermission "ProjectFacadeREST", "remove,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ProjectFacadeREST", "remove,Local,java.lang.Long";
+  permission javax.security.jacc.EJBMethodPermission "ProjectService", "findProjectsByStatus,Local,com.cpwm20.webapps2019.entity.Project$Status";
+  permission javax.security.jacc.EJBMethodPermission "ProjectFacadeREST", "countREST,Local,";
+  permission javax.security.jacc.EJBMethodPermission "ProjectService", "registerProjectWithSet,Local,java.lang.String,java.lang.String,java.lang.String,com.cpwm20.webapps2019.entity.Project$Status,java.util.Set,com.cpwm20.webapps2019.entity.Supervisor";
+  permission javax.security.jacc.EJBMethodPermission "ProjectFacadeREST", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "ProjectService", "registerReport,Local,com.cpwm20.webapps2019.entity.Project,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "ProjectService", "findProject,Local,java.lang.Long";
+  permission javax.security.jacc.EJBMethodPermission "StudentFacadeREST", "findRange,Local,java.lang.Integer,java.lang.Integer";
+  permission javax.security.jacc.EJBMethodPermission "UserService", "getSupervisors,Local,";
+  permission javax.security.jacc.EJBMethodPermission "StudentFacadeREST", "find,Local,java.lang.Long";
+  permission javax.security.jacc.EJBMethodPermission "SupervisorFacadeREST", "create,Local,com.cpwm20.webapps2019.entity.Supervisor";
+  permission javax.security.jacc.EJBMethodPermission "SupervisorFacadeREST", "edit,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "UserService", "getAllUsers,Local,";
+  permission javax.security.jacc.EJBMethodPermission "SupervisorFacadeREST", "edit,Local,java.lang.Long,com.cpwm20.webapps2019.entity.Supervisor";
+  permission javax.security.jacc.EJBMethodPermission "StudentFacadeREST", "create,Local,com.cpwm20.webapps2019.entity.Student";
+  permission javax.security.jacc.EJBMethodPermission "ProjectService", "registerProjectWithStudent,Local,java.lang.String,java.lang.String,java.lang.String,com.cpwm20.webapps2019.entity.Project$Status,com.cpwm20.webapps2019.entity.Student,com.cpwm20.webapps2019.entity.Supervisor";
+  permission javax.security.jacc.EJBMethodPermission "StudentFacadeREST", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "StudentFacadeREST", "remove,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ProjectFacadeREST", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ProjectService", "findProjectByStudent,Local,com.cpwm20.webapps2019.entity.Student";
+  permission javax.security.jacc.EJBMethodPermission "SupervisorFacadeREST", "find,Local,java.lang.Long";
+  permission javax.security.jacc.EJBMethodPermission "TimestampService", "inlineTimestamp,Local,";
+  permission javax.security.jacc.EJBMethodPermission "StudentFacadeREST", "edit,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "UserService", "registerStudent,Local,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "TopicService", "getAllTopics,Local,";
+  permission javax.security.jacc.EJBMethodPermission "StudentFacadeREST", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ProjectFacadeREST", "edit,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ProjectService", "registerProject,Local,java.lang.String,java.lang.String,java.lang.String,com.cpwm20.webapps2019.entity.Project$Status,com.cpwm20.webapps2019.entity.Supervisor";
+  permission javax.security.jacc.EJBMethodPermission "ProjectFacadeREST", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "StudentFacadeREST", "edit,Local,java.lang.Long,com.cpwm20.webapps2019.entity.Student";
+  permission javax.security.jacc.EJBMethodPermission "SupervisorFacadeREST", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "ProjectService", "requestProject,Local,com.cpwm20.webapps2019.entity.Project,com.cpwm20.webapps2019.entity.Student";
+  permission javax.security.jacc.EJBMethodPermission "ProjectFacadeREST", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "UserService", "registerSupervisor,Local,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean";
+  permission javax.security.jacc.EJBMethodPermission "SupervisorFacadeREST", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "StudentFacadeREST", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "TopicService", "registerTopic,Local,java.lang.String,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "UserService", "encrypt,Local,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "StudentFacadeREST", "remove,Local,java.lang.Long";
+  permission javax.security.jacc.EJBMethodPermission "StudentFacadeREST", "countREST,Local,";
+  permission javax.security.jacc.EJBMethodPermission "StartupBean", "init,Local,";
+  permission javax.security.jacc.EJBMethodPermission "ProjectService", "findAllProjects,Local,";
+  permission javax.security.jacc.EJBMethodPermission "SupervisorFacadeREST", "findRange,Local,java.lang.Integer,java.lang.Integer";
+  permission javax.security.jacc.EJBMethodPermission "SupervisorFacadeREST", "remove,Local,java.lang.Long";
+  permission javax.security.jacc.EJBMethodPermission "ProjectFacadeREST", "find,Local,java.lang.Long";
+  permission javax.security.jacc.EJBMethodPermission "ProjectService", "findProjectsByStatusAndSupervisor,Local,com.cpwm20.webapps2019.entity.Project$Status,com.cpwm20.webapps2019.entity.Supervisor";
+  permission javax.security.jacc.EJBMethodPermission "SupervisorFacadeREST", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ProjectService", "removeProject,Local,com.cpwm20.webapps2019.entity.Project";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.EJBRoleRefPermission "StudentFacadeREST", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "SupervisorFacadeREST", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "ProjectFacadeREST", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "UserService", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "TopicService", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "TimestampService", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "StartupBean", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "ProjectService", "**";
+};
+
